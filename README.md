@@ -4,7 +4,10 @@ This is a working setup for the Biomedical Entity-Linking Benchmark (BELB),
 including corpora such as medMentions, linnaeus, s800, ncbi_disease and nlm_chem. 
 This repository contains all necessary steps to install and run BELB correctly across multiple corpora.
 
-BELB was introduced in this paper: https://academic.oup.com/bioinformatics/article/39/11/btad698/7425450?login=true
+BELB was introduced in this paper: 
+
+https://academic.oup.com/bioinformatics/article/39/11/btad698/7425450?login=true
+
 The original repositories (belb and belb-exp) can be found there 
 without my configuration, and with instructions to do your own.
 
@@ -13,6 +16,7 @@ without my configuration, and with instructions to do your own.
 ### Downloading the KBs
 
 You will first need to download the processed KBs here:
+
 https://drive.google.com/file/d/1qDdQIhkGduWKGi-VrVn5aFOmQd3xDipd/view?usp=sharing
 
 It's a 675MB archive that you will then need to unzip (2GB).
@@ -113,8 +117,8 @@ or
 
 ### Running the benchmark
 
-You can choose which corpora to use by activating/deactivating them
-in `belb-exp/scripts/evaluate.py`.
+Edit the ENABLED_CORPORA list in `belb-exp/scripts/evaluate.p` to specify 
+which corpora to include in evaluation.
 
 <br>
 
