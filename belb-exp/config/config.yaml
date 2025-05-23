@@ -1,4 +1,0 @@
-defaults:
-  - data
-  - db
-  - train
