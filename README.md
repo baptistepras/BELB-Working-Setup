@@ -102,7 +102,7 @@ some do. Make sure to have the `pubtator.db` file in `belb/pubtator`.
 
 To convert a knowledge base, run from `belb-exp`:
 
-`PYTHONPATH=../belb python -m belb.kbs.<kb_name> --dir ../belb --data_dir ../belb/raw/kbs/<kb_name> --db ../belb/db.yaml`
+`PYTHONPATH=../belb:. python -m belb.kbs.<kb_name> --dir ../belb --data_dir ../belb/raw/kbs/<kb_name> --db ../belb/db.yaml`
  
 <br>
 
@@ -124,7 +124,7 @@ which corpora to include in evaluation.
 
 Then from `belb-exp` run:
 
-`PYTHONPATH=../belb python scripts/evaluate.py --belb_dir ../belb --k 1 --mode std`
+`PYTHONPATH=../belb:. python scripts/evaluate.py --belb_dir ../belb --k 1 --mode std`
 
 <br>
 
