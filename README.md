@@ -57,7 +57,7 @@ Alternatively, you can install it manually (recommended) by running:
 
 `pip install --force-reinstall pandas==1.4.1`
 
-`pip install --force-reinstall numpy==1.24.4`
+`pip install --force-reinstall numpy==1.26.4`
 
 #### Venv
 
@@ -73,7 +73,7 @@ From the root, install it manually by running:
 
 `pip install --force-reinstall pandas==1.4.1`
 
-`pip install --force-reinstall numpy==1.24.4`
+`pip install --force-reinstall numpy==1.26.4`
 
 <br>
 

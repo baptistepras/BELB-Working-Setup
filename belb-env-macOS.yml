@@ -39,6 +39,7 @@ dependencies:
   - pip:
       - antlr4-python3-runtime==4.9.3
       - attrs==25.3.0
+      - belb==0.0.1
       - bioc==2.0.post4
       - certifi==2025.4.26
       - charset-normalizer==3.4.2
@@ -50,10 +51,10 @@ dependencies:
       - levenshtein==0.21.1
       - loguru==0.6.0
       - lxml==5.4.0
-      - numpy==2.0.2
       - omegaconf==2.3.0
       - openpyxl==3.0.10
       - pandas==1.4.1
+      - numpy==1.26.4
       - python-dateutil==2.9.0.post0
       - pytz==2025.2
       - pyyaml==6.0.2
