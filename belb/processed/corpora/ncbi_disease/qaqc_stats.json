@@ -1,0 +1,16 @@
+{
+ "train": {
+  "identifiers_na_pre_kb": 0,
+  "ann_identifier_replaced_manual_mapping": 80,
+  "text": 3,
+  "ann_identifier_na": 1
+ },
+ "dev": {
+  "identifiers_na_pre_kb": 0,
+  "ann_identifier_replaced_manual_mapping": 7
+ },
+ "test": {
+  "identifiers_na_pre_kb": 0,
+  "ann_identifier_replaced_manual_mapping": 0
+ }
+}

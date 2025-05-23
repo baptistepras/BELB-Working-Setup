@@ -1,0 +1,7 @@
+,gene,disease,chemical,species,cell_line,umls
+genbioel,,0.01,,0.79,,
+arboel_ar,,0.01,,,,
+biosyn_ar,,0.01,,,,
+genbioel_ar,,0.01,,,,
+biosyn,,0.01,,0.77,,
+arboel,,0.01,,0.82,,

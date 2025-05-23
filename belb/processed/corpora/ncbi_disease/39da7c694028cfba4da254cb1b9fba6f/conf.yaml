@@ -1,0 +1,27 @@
+add_foreign_annotations: false
+annotations_file: null
+entity_type: DISEASE
+entity_type_map: null
+entity_types:
+- DISEASE
+foreign_entity_types: null
+local: false
+max_mentions: -1
+mention_markers: false
+name: ncbi_disease
+native_foreign_annotations: false
+pmc: false
+sentences: true
+splits:
+- TRAIN
+- DEV
+- TEST
+subset: null
+subsets: null
+title_abstract: true
+base_url: https://www.ncbi.nlm.nih.gov/CBBresearch/Dogan/DISEASE/
+files:
+- NCBItrainset_corpus.zip
+- NCBIdevelopset_corpus.zip
+- NCBItestset_corpus.zip
+extract: true

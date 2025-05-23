@@ -1,0 +1,25 @@
+add_foreign_annotations: false
+annotations_file: null
+entity_type: CHEMICAL
+entity_type_map: null
+entity_types:
+- CHEMICAL
+foreign_entity_types: null
+local: false
+max_mentions: -1
+mention_markers: false
+name: nlm_chem
+native_foreign_annotations: false
+pmc: true
+sentences: true
+splits:
+- TRAIN
+- DEV
+- TEST
+subset: null
+subsets: null
+title_abstract: true
+base_url: https://ftp.ncbi.nlm.nih.gov/pub/lu/BC7-NLM-Chem-track
+files:
+- BC7T2-NLMChem-corpus_v2.BioC.xml.gz
+extract: true

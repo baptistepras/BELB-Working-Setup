@@ -1,0 +1,27 @@
+add_foreign_annotations: false
+annotations_file: null
+entity_type: UMLS
+entity_type_map: null
+entity_types:
+- UMLS
+foreign_entity_types: null
+local: false
+max_mentions: -1
+mention_markers: false
+name: medmentions
+native_foreign_annotations: false
+pmc: false
+sentences: true
+splits:
+- TRAIN
+- DEV
+- TEST
+subset: ST21PV
+subsets:
+- FULL
+- ST21PV
+title_abstract: true
+base_url: https://github.com/chanzuckerberg/MedMentions/archive/refs/heads/
+files:
+- master.zip
+extract: true

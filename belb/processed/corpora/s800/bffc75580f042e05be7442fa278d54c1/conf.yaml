@@ -1,0 +1,25 @@
+add_foreign_annotations: false
+annotations_file: null
+entity_type: SPECIES
+entity_type_map: null
+entity_types:
+- SPECIES
+foreign_entity_types: null
+local: false
+max_mentions: -1
+mention_markers: false
+name: s800
+native_foreign_annotations: false
+pmc: false
+sentences: true
+splits:
+- TRAIN
+- DEV
+- TEST
+subset: null
+subsets: null
+title_abstract: false
+base_url: https://species.jensenlab.org/files/
+files:
+- S800-1.0.tar.gz
+extract: true
