@@ -1,17 +1,25 @@
 # BELB-Working-Setup
 
-This is a working setup for the Biomedical Entity-Linking Benchmark (BELB), 
-including corpora such as medMentions, linnaeus, s800, ncbi_disease, and nlm_chem. 
-This repository contains all the necessary steps to install and run BELB correctly across multiple corpora.
+This is a working setup for the Biomedical Entity-Linking Benchmark (BELB), including corpora such as medMentions, linnaeus, s800, ncbi_disease, and nlm_chem. This repository contains all the necessary steps to install and run BELB correctly across multiple corpora.
 
-BELB was introduced in this paper: 
+## Reference & Citation
 
-https://academic.oup.com/bioinformatics/article/39/11/btad698/7425450?login=true
+If you use this repository or code in your research, please cite our MIE paper:
 
-The original repositories (belb and belb-exp) can be found there 
-without my configuration, and with instructions to do your own.
+* **MIE Paper:** [https://ebooks.iospress.nl/volumearticle/78623](https://ebooks.iospress.nl/volumearticle/78623)
 
-This configuration includes scripts to analyze results and datasets on on a mention-level.
+For the underlying benchmark framework, you can also refer to the original BELB paper:
+* **BELB Paper:** [https://academic.oup.com/bioinformatics/article/39/11/btad698/7425450](https://academic.oup.com/bioinformatics/article/39/11/btad698/7425450)
+
+## Acknowledgement
+
+This work has been supported by CHIST-ERA grant **CHIST-ERA22-ORD-02** and by the Agence Nationale de la Recherche under project numbers **ANR23-CHRO-0008-01** and **ANR-22-CPJ1-0087-01**.
+
+---
+
+The original repositories (`belb` and `belb-exp`) can be found there without my configuration, and with instructions to do your own.
+
+This configuration includes scripts to analyze results and datasets on a mention-level.
 
 ## Usage Instructions
 
@@ -81,9 +89,7 @@ From the root, install it manually by running:
 
 ## Converting raw data to processed
 
-All corpora and knowledge bases are already converted in this setup, 
-and raw data is not included in the repository, but if you ever need 
-to download some, they must be stored in:
+All corpora and knowledge bases are already converted in this setup, and raw data is not included in the repository, but if you ever need to download some, they must be stored in:
 
 `belb/raw/corpora/<corpora_name>` for corpora
 
@@ -97,8 +103,7 @@ To convert corpora, run from `belb-exp`:
 
 `PYTHONPATH=../belb:. python -m belb.corpora.<corpora_name> --dir ../belb --db ../belb/db.yaml --pubtator ../belb/pubtator/pubtator.db --sentences`
 
-Note that the argument `pubtator` is optional; not all corpora need it, but
-some do. Make sure to have the `pubtator.db` file in `belb/pubtator`.
+Note that the argument `pubtator` is optional; not all corpora need it, but some do. Make sure to have the `pubtator.db` file in `belb/pubtator`.
 
 <br>
 
@@ -119,10 +124,7 @@ or
 
 ### Running the benchmark
 
-Edit the CORPORA list in `belb-exp/scripts/evaluate.p` to specify 
-which corpora to include in the evaluation.
-
-Edit the 
+Edit the CORPORA list in `belb-exp/scripts/evaluate.p` to specify which corpora to include in the evaluation.
 
 <br>
 
@@ -144,8 +146,7 @@ Compute advanced metrics on predictions by first running from `belb-exp`:
 
 `python3 metrics/annotate_preds.py --corpora <corpora_name>`
 
-Add the argument `--force` to force the recomputation of the metrics.
-Otherwise, the script will try to pick them up from saved files.
+Add the argument `--force` to force the recomputation of the metrics. Otherwise, the script will try to pick them up from saved files.
 
 You can change the threshold for most characteristics using the following args:
 
@@ -185,8 +186,7 @@ Analyze your dataset characteristics by running from `belb-exp`:
 
 `python3 metrics/analyze_datasets.py --corpora <corpora_name>`
 
-Add the argument `--force` to force the recomputation of the metrics.
-Otherwise, the script will try to pick them up from saved files.
+Add the argument `--force` to force the recomputation of the metrics. Otherwise, the script will try to pick them up from saved files.
 
 You can change the threshold for most characteristics using the following args:
 
@@ -204,13 +204,9 @@ You can change the threshold for most characteristics using the following args:
 ✅ These corpora have been tested and verified to run correctly:
 
 - s800
-
 - medMentions
-
 - linnaeus
-
 - NCBI_disease (Warning: low performance, might suggest a corrupted corpora/KB)
-
 - NLM_chem (Warning: low performance, might suggest a corrupted corpora/KB)
 
 <br>
@@ -218,38 +214,26 @@ You can change the threshold for most characteristics using the following args:
 ⚠️ The following corpora could not be processed due to data corruption or missing dependencies:
 
 - bc5cdr_disease (corrupted zip file)
-
 - bc5cdr_chemical (corrupted zip file)
-
 - bioID (corrupted tar file)
-
 - gnormplus (corrupted NCBI_gene KB)
-
 - NLM_gene (corrupted NCBI_gene KB)
-
 - SNP (requires dbSNP knowledge base)
-
 - osiris (requires dbSNP knowledge base)
-
 - tmVar (requires dbSNP knowledge base)
 
 
 ### Pubtator
 
-Pubtator is a tool required by several corpora to convert to the
-BELB format. It consists of a 32GB archive, which is then processed
-into a 100GB SQLite database.
+Pubtator is a tool required by several corpora to convert to the BELB format. It consists of a 32GB archive, which is then processed into a 100GB SQLite database.
 
-It is advised not to keep it locally (on your laptop, for instance) as it
-is very heavy and unnecessary unless you want to reconvert some corpora.
+It is advised not to keep it locally (on your laptop, for instance) as it is very heavy and unnecessary unless you want to reconvert some corpora.
 
 ⚠️ It is not required to run the benchmark evaluation.
 
 
 ### dbSNP
 
-dbSNP is a big knowledge base needed by a few corpora (with VARIANTS). 
-It consists of an archive that is over 100GB, and then needs to be 
-converted into a processed knowledge base that is probably over 700/800GB.
+dbSNP is a big knowledge base needed by a few corpora (with VARIANTS). It consists of an archive that is over 100GB, and then needs to be converted into a processed knowledge base that is probably over 700/800GB.
 
 ⚠️ It is not required to run the benchmark evaluation.
